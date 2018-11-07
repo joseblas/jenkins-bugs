@@ -14,7 +14,7 @@ stage('Demo') {
    def o = new org.Foo()
    //o.checkOutFrom 'git-plugin'
    //cd git-plugin
-   sh "'${mvnHome}/bin/mvn' -Dmaven.test.failure.ignore clean package"
+   sh "'${mvnHome}/bin/mvn'. -DskipTests -Dmaven.test.skip=true clean package"
    
  }
 }
