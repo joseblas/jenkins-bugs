@@ -13,8 +13,8 @@ stage('Demo') {
    mvnHome = tool name: 'M3', type: 'maven'
    echo mvnHome
   
-   //o.checkOutFrom 'git-plugin'
-   //cd git-plugin
+   o.checkOutFrom 'git-plugin'
+   cd git-plugin
    sh "'${mvnHome}/bin/mvn' -DskipTests -Dmaven.test.skip=true clean package"
    
  }
