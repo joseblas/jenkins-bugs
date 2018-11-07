@@ -5,5 +5,5 @@
 
 stage('Demo') {
  echo 'Hello World'
- sayHello()
+ org.sayHello()
 }
