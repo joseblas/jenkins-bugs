@@ -6,7 +6,7 @@ def sayHello(String name = "Phil") {
 }
 
 def checkOutFrom(repo) {
-  git url: "git@github.com:jenkinsci/${repo}"
+  //git url: "git@github.com:jenkinsci/${repo}"
   sayHello(" gitted")
 }
 
