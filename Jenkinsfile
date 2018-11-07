@@ -5,6 +5,7 @@ node {
    // -- ETAPA: Compilar
    // ------------------------------------
    stage 'Compilar'
+   sayHello()
    
    // -- Configura variables
    echo 'Configurando variables'
