@@ -1,13 +1,13 @@
 package org;
 
 
-def sayHello() {
-	echo "Hello World"
-	sh 'echo Hola'
+def sayHello(String name = "Phil") {
+	echo "Hello World ${name}"
 }
 
 def checkOutFrom(repo) {
   git url: "git@github.com:jenkinsci/${repo}"
+  sayHello(" gitted")
 }
 
 
@@ -15,6 +15,7 @@ def checkOutFrom(repo) {
 import org.apache.commons.math3.primes.Primes
 
 void parallelize(int count) {
+	sayHello(count)
   if (!Primes.isPrime(count)) {
     error "${count} was not prime"
   }
