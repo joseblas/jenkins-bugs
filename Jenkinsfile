@@ -5,5 +5,6 @@
 
 stage('Demo') {
  echo 'Hello World'
- org.sayHello()
+ def o = new org.Foo()
+ o.sayHello()
 }
