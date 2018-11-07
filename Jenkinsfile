@@ -15,7 +15,7 @@ stage('Demo') {
   
    //o.checkOutFrom 'git-plugin'
    //cd git-plugin
-   sh "'${mvnHome}/bin/mvn'. -DskipTests -Dmaven.test.skip=true clean package"
+   sh "'${mvnHome}/bin/mvn' -DskipTests -Dmaven.test.skip=true clean package"
    
  }
 }
