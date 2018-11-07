@@ -8,5 +8,6 @@ stage('Demo') {
  def o = new org.Foo()
  node {
    o.checkOutFrom 'git-plugin'
+   parallelize (3)
  }
 }
