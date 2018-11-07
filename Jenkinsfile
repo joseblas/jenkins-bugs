@@ -1,11 +1,15 @@
 #!groovy
 
+@Library('utils')_
+
 node {
    // ------------------------------------
    // -- ETAPA: Compilar
    // ------------------------------------
    stage 'Compilar'
-   sayHello()
+   
+   library('utils').info 'Hola'
+
    
    // -- Configura variables
    echo 'Configurando variables'
