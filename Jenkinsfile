@@ -5,12 +5,13 @@
 
 stage('Demo') {
  echo 'Hello World'
- mvn -v
+ mvnHome = tool name: 'M3', type: 'maven'
+ echo mvnHome
  def o = new org.Foo()
  node {
    o.checkOutFrom 'git-plugin'
    cd git-plugin
-   mvn clean compile
+    sh "'${mvnHome}/bin/mvn' -Dmaven.test.failure.ignore clean package"
    o.parallelize(3)
  }
 }
