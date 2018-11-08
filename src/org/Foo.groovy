@@ -7,7 +7,7 @@ def sayHello(String name = "Phil") {
 
 def checkOutFrom(script, repo) {
 	 sayHello(" gitted")
-  this.git url: "git@github.com:jenkinsci/${repo}"
+  script.git url: "git@github.com:jenkinsci/${repo}"
   sayHello(" gitted")
 }
 
