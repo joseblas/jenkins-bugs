@@ -7,6 +7,7 @@ def sayHello(String name = "Phil") {
 
 def checkOutFrom(script, repo) {
   script.sh "echo hola"
+    script.git "url: 'git@github.com:jenkinsci/git-plugin'"
 }
 
 
