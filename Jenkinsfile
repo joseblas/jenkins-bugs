@@ -13,7 +13,7 @@ stage('Demo') {
    mvnHome = tool name: 'M3', type: 'maven'
    echo mvnHome
   
-
+    git url: "git@github.com:jenkinsci/git-plugin"
    
  }
 }
