@@ -16,7 +16,7 @@ def checkOutFrom(script, repo) {
 import org.apache.commons.math3.primes.Primes
 
 void parallelize(int count) {
-	// sayHello(count)
+	sayHello(count)
   if (!Primes.isPrime(count)) {
     error "${count} was not prime"
   }
