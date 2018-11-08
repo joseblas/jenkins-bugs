@@ -1,9 +1,10 @@
 pipeline {
     agent any
+    def branch='PIPELINE'
     stages {
         stage('Phase 1'){
             steps{
-                def branch='PIPELINE'
+
                 sh "echo"
                 checkout([$class: 'GitSCM',
                               userRemoteConfigs: [[url: 'https://github.com/joseblas/jenkins-bugs',
