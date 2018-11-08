@@ -7,7 +7,6 @@ def sayHello(String name = "Phil") {
 
 def checkOutFrom(script, repo) {
   script.sh "echo hola"
-
 }
 
 
