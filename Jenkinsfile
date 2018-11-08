@@ -12,8 +12,9 @@ stage('Demo') {
    o.parallelize(3)
    mvnHome = tool name: 'M3', type: 'maven'
    echo mvnHome
-  
-    git url: "git@github.com:jenkinsci/git-plugin"
+
+   checkOutFrom(this, 'git-plugin')
+   git url: "git@github.com:jenkinsci/git-plugin"
    
  }
 }
