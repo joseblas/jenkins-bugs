@@ -5,9 +5,9 @@ def sayHello(String name = "Phil") {
 	echo "Hello World ${name}"
 }
 
-def checkOutFrom(repo) {
+def checkOutFrom(script, repo) {
 	 sayHello(" gitted")
-  //git url: "git@github.com:jenkinsci/${repo}"
+  this.git url: "git@github.com:jenkinsci/${repo}"
   sayHello(" gitted")
 }
 
