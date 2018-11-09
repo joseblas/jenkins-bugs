@@ -5,7 +5,7 @@ pipeline {
         stage('Phase 1'){
             steps{
 
-                sh "echo"
+                sh "echo two"
                 checkout([$class: 'GitSCM',
                               userRemoteConfigs: [[url: 'https://github.com/joseblas/jenkins-bugs',
                                                    refspec: "+refs/heads/${branch}:refs/remotes/origin/${branch}",
