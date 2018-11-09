@@ -1,29 +1,20 @@
-pipeline {
-    agent any
-    def branch='PIPELINE'
-    stages {
-        stage('Phase 1'){
-            steps{
+#!groovy
 
-                sh "echo two"
-                checkout([$class: 'GitSCM',
-                              userRemoteConfigs: [[url: 'https://github.com/joseblas/jenkins-bugs',
-                                                   refspec: "+refs/heads/${branch}:refs/remotes/origin/${branch}",
-                                                  ]],
-                              branches: [[name: branch]],
-                              extensions: [[$class: 'AuthorInChangelog'],
-                                           [$class: 'CleanCheckout'],
-                                           [$class: 'CloneOption',
-                                            honorRefspec: true,
-                                            noTags: true,
-                                            reference: '/var/lib/git/mwaite/bugs/jenkins-bugs.git',
-                                            timeout: 2],
-                                           [$class: 'LocalBranch', localBranch: branch],
-                                           ],
-                              gitTool: scm.gitTool
-                             ])
-           }
-        }
-    }
+@Library('utils')_
 
+
+stage('Demo') {
+ echo 'Hello World'
+ node {
+   deleteDir()
+   echo 'Hello Node'
+   def o = new org.Foo()
+   o.parallelize(3)
+   mvnHome = tool name: 'M3', type: 'maven'
+   echo mvnHome
+
+   o.checkOutFrom(this, 'git-plugin')
+   git url: "git@github.com:jenkinsci/git-plugin"
+   
+ }
 }
