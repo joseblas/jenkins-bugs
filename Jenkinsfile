@@ -1,10 +1,5 @@
 #!groovy
 
-
-stage('Demo') {
- echo 'Hello World'
- node {
-   deleteDir()
-   echo 'Hello Node'
- }
-}
+  node {
+       echo 'Hello Node'
+     }
